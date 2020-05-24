@@ -1,0 +1,176 @@
+html, body {
+    background: #E5E5E5;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2, h1 {
+    text-align: center;
+    color: brown;
+}
+
+#app-head {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-areas: "header header" "col-left col-right" "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.title {
+    text-align: center;
+    margin: auto;
+    color: brown;
+    font-size: 27px;
+}
+
+.head-headline {
+    grid-area: header;
+    font-size: 1.4em;
+    background: black;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid brown;
+}
+
+.left-container {
+    grid-area: col-left;
+    font-size: 1.6 em;
+    height: 100%;
+    padding: 1em;
+    margin: auto;
+}
+
+.entryStatus {
+    grid-area: col-right;
+    font-size: 2em;
+    height: 100%;
+    padding: 1em;
+    margin: auto;
+}
+
+.feelings-entry, .zip {
+    font-size: 1em;
+    padding: 1em 0.5em;
+}
+
+#zip {
+    padding: 0.2em;
+}
+
+.card {
+    background: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    padding: 1em;
+    max-width: 600px;
+    min-height: 500px;
+    margin: auto;
+}
+
+#entryDetail {
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+}
+
+.img {
+    width: 100px;
+}
+
+small {
+    font-size: 13px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+label {
+    display: block;
+    font-size: 27px;
+    width: 80%;
+    margin: auto;
+}
+
+input {
+    display: block;
+    color: #2d3547;
+    width: 80%;
+    font-size: 20px;
+    border: 1px solid brown;
+    border-radius: 8px;
+    padding: 0.2em;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+button {
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button:active {
+    box-shadow: 1px 2px 3px #444;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+#generate {
+    margin-top: 30px;
+}
+
+textarea {
+    display: block;
+    color: #2d3547;
+    width: 80%;
+    font-size: 20px;
+    border: 1px solid brown;
+    border-radius: 8px;
+    padding: 0.2em;
+    margin: auto;
+}
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: brown;
+}
+
+@media (max-width: 768px) {
+    #app-head {
+        grid-template-areas: "header" "col-right" "col-left " "footer";
+        grid-template-columns: 1fr;
+    }
+}
